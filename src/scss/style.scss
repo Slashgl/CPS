@@ -1,0 +1,69 @@
+@import 'blocks/_header.scss';
+@import 'blocks/_services.scss';
+@import "blocks/_btn.scss";
+@import "blocks/_asideMenu";
+@import "blocks/_brands.scss";
+@import "modal/_feedBack.scss";
+@import "modal/_call.scss";
+@import "blocks/_repair.scss";
+@import "blocks/_price";
+@import "blocks/_footer.scss";
+@import "blocks/_screen.scss";
+@import "blocks/_variables";
+
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Regular.woff') format('woff'),
+  url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Medium.woff') format('woff'),
+  url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.eot');
+  src: url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TTLakes-Bold.woff') format('woff'),
+  url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+* {
+  font-family: 'TT Lakes', serif;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @media (min-width: 1440px) {
+    margin:0;
+  }
+}
+
+.container {
+
+  max-width: 1120px;
+  @media (min-width: 1120px) {
+    padding: 0 32px;
+  }
+  @media (min-width: 1440px) {
+    padding: 0;
+  }
+}
+body {
+  min-width: 320px;
+
+  @media (min-width: 1120px) {
+    background: #F2F2F2;
+  }
+}

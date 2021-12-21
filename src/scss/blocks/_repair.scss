@@ -1,0 +1,123 @@
+@import 'variables';
+
+.repair {
+  min-height: 300px;
+  background: $light-gray;
+
+  &__wrapper {
+    position: relative;
+    margin-left: 12px;
+  }
+}
+
+.repair__inner {
+  display: flex !important;
+  flex-wrap: wrap;
+  width: 100% !important;
+  padding: 32px 0 0 0;
+  @media (max-width: 330px) {
+    flex-wrap: nowrap;
+    min-height: 200px;
+    width: 100% !important;
+    padding: 0;
+  }
+
+}
+
+.repair__item {
+  min-height: 160px;
+  width: 240px !important;
+  margin-bottom: 16px;
+  background: $white;
+  border: 1px solid #EAEAEA;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding-top: 16px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+  }
+
+  @media (max-width: 330px) {
+    width: 100% !important;
+    display: flex;
+  }
+  @media (min-width: 1440px) {
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+  }
+
+  span {
+    position: absolute;
+    cursor: pointer;
+    top: 104px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $red;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 11.7px;
+      right: 18px;
+      height: 8px;
+      width: 2px;
+      background: $red;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      height: 8px;
+      width: 2px;
+      background: $red;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.repair__pagination {
+  display: none;
+  @media (max-width: 330px) {
+    display: block;
+    position: absolute;
+    top: 180px;
+  }
+}
+
+.hiddenRepair {
+  display: none;
+}
+
+.repair__arrow {
+  @media(max-width: 330px) {
+    display: none;
+  }
+}
+
+.repair-blur {
+  height: 166px;
+  top: 20px;
+}
+
+.swiper-pagination-bullet-active {
+  background: $gray-blue !important;
+}
+
+.swiper-pagination-bullet {
+  background: $gray-red !important;
+}

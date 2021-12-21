@@ -1,0 +1,118 @@
+@import "../blocks/_variables.scss";
+.modal__feedback {
+  position: absolute;
+  overflow:hidden;
+  top: 0;
+  right: 0;
+  background-color: $white;
+  width: 440px;
+  height: 100vh;
+  padding: 40px 32px;
+  z-index: 1000;
+  border-left: 1px solid $light-green;
+  border-radius: 1px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  @media (min-width: 576px) {
+    padding: 24px 16px;
+    width: 440px;
+  }
+  @media (max-width: 575px) {
+    padding: 40px 16px;
+    width: 100%;
+  }
+}
+.modal__feedback--title {
+  font-size: 24px;
+  font-weight: 700;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 4px;
+    height: 40px;
+    background: $blue;
+    border-radius: 3px;
+  }
+  @media (max-width: 575px) {
+    padding-top: 40px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 75px;
+    }
+  }
+  @media (min-width: 576px) {
+    &:before {
+      content: '';
+      position: absolute;
+      top:20px;
+    }
+  }
+}
+.modal__feedback--input {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 0 0;
+  height: 310px;
+  width: 100%;
+  input {
+    margin:0 0 16px 0;
+    height: 48px;
+    background: $white;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    &::placeholder {
+      font-size: 16px;
+      padding: 12px 0 0 16px;
+      color: $gray-blue;
+    }
+  }
+  textarea {
+    margin: 0;
+    background: $white;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    height: 135px;
+    &::placeholder {
+      font-size: 16px;
+      padding: 12px 0 0 16px;
+      color: $gray-blue;
+    }
+  }
+}
+.modal__feedback--agreement {
+  width: 100%;
+  margin-top: 16px;
+  a {
+    text-decoration: none;
+    color: $red;
+  }
+}
+.modal__feedback--parse {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 23px;
+}
+.active {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+.modal__feedback--close {
+  @media (max-width: 575px) {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+  }
+  @media (min-width: 576px) {
+    display: none;
+  }
+  &--onclose-overlay {
+    position: absolute;
+    top: 20px;
+    right: 455px;
+  }
+}
