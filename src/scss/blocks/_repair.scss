@@ -1,25 +1,25 @@
 @import 'variables';
 
 .repair {
-  min-height: 300px;
+  min-height: 280px;
   background: $light-gray;
 
   &__wrapper {
     position: relative;
-    margin-left: 12px;
   }
 }
 
 .repair__inner {
   display: flex !important;
   flex-wrap: wrap;
-  width: 100% !important;
-  padding: 32px 0 0 0;
+  margin-left: 8px;
   @media (max-width: 330px) {
     flex-wrap: nowrap;
     min-height: 200px;
-    width: 100% !important;
     padding: 0;
+  }
+  @media (min-width: 1440px) {
+    padding: 12px 15px;
   }
 
 }
@@ -33,7 +33,9 @@
   box-sizing: border-box;
   border-radius: 6px;
   padding-top: 16px;
-  text-align: center;
+  @media (min-width: 331px) {
+    text-align: center;
+  }
 
   &:hover {
     cursor: pointer;
@@ -41,8 +43,9 @@
   }
 
   @media (max-width: 330px) {
-    width: 100% !important;
+    width: 240px !important;
     display: flex;
+
   }
   @media (min-width: 1440px) {
     margin-right: 20px;
@@ -53,6 +56,7 @@
     font-size: 16px;
     color: black;
     font-weight: 500;
+    margin-left: 16px;
   }
 
   span {
@@ -94,8 +98,6 @@
   display: none;
   @media (max-width: 330px) {
     display: block;
-    position: absolute;
-    top: 180px;
   }
 }
 
@@ -108,7 +110,9 @@
     display: none;
   }
 }
-
+.show-repair {
+  margin-left: 10px;
+}
 .repair-blur {
   height: 166px;
   top: 20px;

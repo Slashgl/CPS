@@ -1,4 +1,5 @@
 import '../scss/style.scss'
+import { auto } from 'html-webpack-plugin/lib/chunksorter';
 document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.querySelector('.overlay');
     const body = document.body;
@@ -50,14 +51,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     menuBtn.addEventListener('click', () => {
-        openOverlay();
-        menu.classList.remove('close');
+
+        menu.classList.remove('closeAside');
     });
 
     closeBtn.forEach(el => {
         el.addEventListener('click', () => {
             closedOverlay();
-            menu.classList.add('close');
+            menu.classList.add('closeAside');
             menu.classList.remove('active');
 
             menuFeedBack.classList.add('close');
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('click', ({target}) => {
         if(target.className.includes('overlay')) {
             closedOverlay()
-            menu.classList.add('close');
+            menu.classList.add('closeAside');
             menuFeedBack.classList.add('close');
             menuCall.classList.add('close');
         }
@@ -91,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
             menuFeedBack.classList.remove('close');
             openOverlay();
         });
-
     })
 
     btnCall.forEach(el => {
@@ -101,22 +101,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })
 
-
-//
-
   if(clientWidth < 331) {
-    const swiper = new Swiper('.swiper', {
+    new Swiper('.swiper', {
       direction: 'horizontal',
+      slidePerView: 'auto',
+      slidesPerView: 1,
       initialSlide: 0,
-
-
       spaceBetween: 16,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
     });
-    swiper.slideNext();
   }
-
 });

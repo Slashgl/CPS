@@ -51,15 +51,6 @@
     }
   }
 }
-
-.active {
-  display: block;
-}
-
-.close {
-  display: none;
-
-}
 .modal__feedback--close {
   @media (max-width: 575px) {
     position: absolute;
@@ -72,4 +63,15 @@
     right: 455px;
   }
 }
-
+.data-processing {
+  &:hover {
+    color: aqua;
+    opacity: 0.7;
+  }
+}
+.politics {
+  &:hover {
+    color: aqua;
+    opacity: 0.7;
+  }
+}

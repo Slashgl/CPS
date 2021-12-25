@@ -5,35 +5,25 @@ $light-green: #D9FFF5;
 
 .brands {
   background: #F8F8F8;
-
+  padding-top: 20px;
+  width: 100% !important;
   &__header {
     padding: 15px 18px;
     min-height: 56px;
     font-size: 16px;
     text-transform: uppercase;
     color: #7E7E82;
-    background: linear-gradient(270deg, $light-gray 0%, $white 98.61%);
+    background: linear-gradient(135deg, $light-gray 0%, $white 98.61%);
     border-top: 1px solid $light-green;
     @media (max-width: 767px) {
       min-height: 56px;
     }
 
   }
-
   &__wrapper {
-    min-height: 130px !important;
-    margin-top: 12px;
-    @media (max-width: 330px) {
-      min-height: 154px;
-
-    }
-    @media (min-width: 1440px) {
-      padding: 12px 12px;
-    }
-    @media (min-width: 720px) and (max-width: 767px) {
-      margin: 12px 24px;
-    }
+    margin: 0 0 0 16px;
   }
+
 
   &__arrow {
     margin: 0 0 50px 60px;
@@ -60,16 +50,19 @@ $light-green: #D9FFF5;
   }
 }
 
-.swiper-wrapper {
+.brands__inner {
   display: flex !important;
   flex-wrap: wrap;
-
+  min-height: 100px !important;
+  @media (min-width: 331px) and (max-width: 1439px) {
+    padding: 12px 15px;
+  }
   @media (max-width: 330px) {
     flex-wrap: nowrap;
     min-height: 100px;
-    width: 100% !important;
-    margin: 12px 0 0 -2px;
+    margin-right: 1000px;
   }
+
 }
 
 .brands__slide {
@@ -103,9 +96,9 @@ $light-green: #D9FFF5;
 
   @media (max-width: 330px) {
     display: flex;
-    width: 100% !important;
+    justify-content: space-between;
+    //width: 240px !important;
   }
-
   img {
     margin: 0 0 0 16px;
   }
@@ -148,18 +141,15 @@ $light-green: #D9FFF5;
 }
 
 .brandsHidden {
-  display: none;
-
+  @media (min-width: 331px) {
+    display: none;
+  }
 }
 
 .brands__pagination {
 
   @media (min-width: 768px) {
     display: none;
-  }
-  @media (max-width: 330px) {
-    position: absolute !important;
-    top: 95px !important;
   }
 }
 

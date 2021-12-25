@@ -27,7 +27,6 @@
   flex-wrap: wrap;
   width: 100% !important;
   min-height: 250px;
-  padding-top: 32px;
   background-color: $light-gray !important;
   @media (max-width: 330px) {
     padding: 0;
@@ -40,10 +39,10 @@
   align-items: center;
   flex-direction: column !important;
   width: 100% !important;
+  margin-left: 8px;
   @media (max-width: 767px) {
     display: flex !important;
     flex-direction: row !important;
-    margin-top: 16px;
     min-height: 250px;
   }
 
@@ -59,7 +58,7 @@
   padding-left: 16px;
   background-color: $white;
 
-  &:nth-child(n + 2) {
+  &:nth-child(n + 3) {
     &:before {
       content: '';
       width: 100%;
@@ -71,7 +70,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: flex !important;
     flex-direction: column !important;
     background: $white;
@@ -86,7 +85,7 @@
     margin-right: 400px;
   }
   @media (max-width: 330px) {
-    width: 100%!important;
+    width: 260px!important;
   }
 }
 
@@ -109,19 +108,20 @@
   color: $gray;
   opacity: 0.72;
   margin: 31px 0 16px 56px;
-
-  &:nth-child(2) {
-    margin-left: 120px;
+  &:nth-child(1) {
+    margin-left: -50px;
   }
-
   @media (min-width: 1120px) {
     margin: 0;
     &:nth-child(2) {
-      margin-left: 80px;
+      margin-left: 140px;
     }
     &:nth-child(3) {
       margin-right: 320px;
     }
+  }
+  @media (min-width: 768px) and (max-width: 1119px) {
+    margin-left: 30px;
   }
   @media (max-width: 1119px) {
     &:nth-child(1) {
@@ -188,14 +188,17 @@
 }
 
 .price__center {
-  margin: 0;
   @media (max-width: 767px) {
     flex-basis: 0;
     margin-top: 10px;
     margin-right: auto;
   }
 }
-
+.free {
+  @media (min-width: 768px) {
+    margin-left: 15px;
+  }
+}
 .price__item {
   margin: 0;
   @media (max-width: 330px) {
@@ -223,11 +226,6 @@
     height: 200px;
     background: linear-gradient(270deg, $light-gray 16.84%, rgba(248, 248, 248, 0.0001) 100%);
   }
-}
-
-.price__pagination {
-  position: absolute;
-  top: 240px;
 }
 
 .price__sentence {

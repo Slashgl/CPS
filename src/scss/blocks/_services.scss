@@ -155,9 +155,8 @@
   }
   .services__right {
     display: flex;
-    margin: 0;
     align-items: center;
-
+    margin-right: 15px;
     label {
       margin-right: 8px;
       font-weight: 500;
@@ -175,7 +174,6 @@
   min-height: 60px;
   width: 100%;
   margin-top: 24px;
-
   li {
     flex-basis: 0;
     a {
