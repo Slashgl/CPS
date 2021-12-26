@@ -15,11 +15,15 @@
   }
 
   &__description {
-    width: 490px;
     margin-right: 16px;
     margin-bottom: 10px;
+    @media (min-width: 1120px) {
+      width: 490px;
+    }
     &-hidden {
-      width: 500px;
+      @media (min-width: 1120px) {
+        width: 490px;
+      }
     }
   }
 
@@ -86,7 +90,6 @@
     }
     @media (min-width: 1120px) {
       max-width: 100%;
-
     }
 
     img {
@@ -99,7 +102,10 @@
 
   &__min-width768 {
     display: none;
-    width: 500px;
+    @media (min-width: 1120px) {
+      width: 490px;
+      margin: 0;
+    }
     @media (min-width: 768px) and (max-width: 1119px) {
       margin-top: 20px;
       display: block;
@@ -113,8 +119,11 @@
   &__min-width1120 {
     display: none;
     @media (min-width: 1120px) {
+      width: 490px;
+
+    }
+    @media (min-width: 1120px) {
       display: block;
-      width: 500px;
     }
   }
 

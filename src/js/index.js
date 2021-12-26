@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     menuBtn.addEventListener('click', () => {
-
+        openOverlay()
         menu.classList.remove('closeAside');
     });
 
