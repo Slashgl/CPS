@@ -104,10 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if(clientWidth < 331) {
     new Swiper('.swiper', {
       direction: 'horizontal',
-      slidePerView: 'auto',
-      slidesPerView: 1,
-      initialSlide: 0,
-      spaceBetween: 16,
+      slidesPerView: 'auto',
+      spaceBetween: 10,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
