@@ -5,7 +5,8 @@ $light-green: #D9FFF5;
 
 .brands {
   background: #F8F8F8;
-  padding-top: 20px;
+  padding-top: 24px;
+
   &__header {
     padding: 15px 18px;
     min-height: 56px;
@@ -21,6 +22,9 @@ $light-green: #D9FFF5;
   }
   &__wrapper {
     margin: 0 0 0 16px;
+    @media (min-width: 1440px) {
+      margin-left: 42px;
+    }
   }
 
 
@@ -57,9 +61,7 @@ $light-green: #D9FFF5;
   display: flex !important;
   flex-wrap: wrap;
   min-height: 100px !important;
-  @media (min-width: 331px) and (max-width: 1439px) {
-    padding: 12px 15px;
-  }
+
   @media (max-width: 330px) {
     flex-wrap: nowrap;
     min-height: 100px;
@@ -95,6 +97,7 @@ $light-green: #D9FFF5;
   }
   @media (min-width: 1440px) {
     margin-right: 20px;
+
   }
 
   @media (max-width: 330px) {

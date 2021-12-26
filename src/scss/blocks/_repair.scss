@@ -13,6 +13,7 @@
   display: flex !important;
   flex-wrap: wrap;
   margin-left: 8px;
+  padding-top: 10px;
   @media (max-width: 330px) {
     flex-wrap: nowrap;
     min-height: 200px;
@@ -114,8 +115,9 @@
   margin-left: 10px;
 }
 .repair-blur {
+  width: 24px;
   height: 166px;
-  top: 20px;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
 }
 
 .swiper-pagination-bullet-active {

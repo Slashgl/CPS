@@ -61,6 +61,27 @@
     position: absolute;
     top: 20px;
     right: 455px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 19px;
+      width: 2px;
+      height: 21px;
+      background-color: $white;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 19px;
+      width: 2px;
+      height: 21px;
+      background-color: $white;
+      transform: rotate(135deg);
+    }
   }
 }
 .data-processing {
